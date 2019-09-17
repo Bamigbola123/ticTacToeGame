@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tic Tac Toe Game</title>
+	<link rel="stylesheet" type="text/css" href="ticTacToeGame.css">
+</head>
+<body>
+	<p id="gameName">TicTacToe Game</p>
+	<div class="mainDiv">
+		<button id="firstPlayer" value="XX" onclick="change('XX')">START GAME</button>
+		<button id="secondPlayer" value="OO" onclick="change('OO')">SWITCH PLAYER</button>
+		<table class="game">
+			<tr id="">
+				<td id="11" onclick="display(event)"></td>
+				<td id="12" onclick="display(event)"></td>
+				<td id="13" onclick="display(event)"></td>
+			</tr>
+
+			<tr id="">
+				<td id="21" onclick="display(event)"></td>
+				<td id="22" onclick="display(event)"></td>
+				<td id="23" onclick="display(event)"></td>
+			</tr>
+
+			<tr id="">
+				<td id="31" onclick="display(event)"></td>
+				<td id="32" onclick="display(event)"></td>
+				<td id="33" onclick="display(event)"></td>
+			</tr>
+		</table>
+		<button id="restart" onclick="refresh()">Restart Game</button>	
+	</div>
+
+	<script type="text/javascript">
+		var you;
+		function change(b){
+		you = b; 
+		}
+
+		 function display(a){
+		 	if (you == 'XX'){
+			a.target.innerHTML = 'X';
+			}
+
+			else if(you == 'OO'){
+				a.target.innerHTML = 'O';
+			}
+			/*else {
+				a.target.innerHTML = 'O';
+			}*/
+		}
+
+		function refresh(){
+			document.location.reload(false);
+		}
+	</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
